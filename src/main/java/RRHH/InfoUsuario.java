@@ -43,6 +43,7 @@ public class InfoUsuario {
         return Objects.hash(usuarioID);
     }
 
+
     /**
      * Reduce los días de vacaciones pendientes del usuario.
      *
@@ -101,4 +102,5 @@ public class InfoUsuario {
             return false;
         }
     }
+
 }
