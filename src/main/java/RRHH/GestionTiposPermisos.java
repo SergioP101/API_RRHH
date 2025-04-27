@@ -28,5 +28,13 @@ public class GestionTiposPermisos {
         return new ArrayList<>(tiposPermiso); // Devolver una copia para evitar modificaciones externas
     }
 
-    // Métodos para editar o eliminar tipos de permiso si es necesario
+    public void eliminarTipoPermiso(TipoPermiso tipoPermisoAEliminar) {
+        if (tiposPermiso.contains(tipoPermisoAEliminar)) {
+            tiposPermiso.remove(tipoPermisoAEliminar);
+            System.out.println("Tipo de permiso " + tipoPermisoAEliminar + " eliminado correctamente.");
+        } else {
+            System.out.println("El tipo de permiso " + tipoPermisoAEliminar + " no existe.");
+        }
+    }
+
 }

@@ -23,6 +23,22 @@ public class GestionCuadrantes {
                 .findFirst()
                 .orElse(null);
     }
+    public void eliminarCuadrante(int cuadranteID) {
+        // Buscar el cuadrante por su ID
+        Cuadrante cuadranteAEliminar = cuadrantes.stream()
+                .filter(c -> c.getCuadranteID() == cuadranteID)
+                .findFirst()
+                .orElse(null);
+
+        // Verificar si se encontró el cuadrante
+        if (cuadranteAEliminar != null) {
+            cuadrantes.remove(cuadranteAEliminar);
+            System.out.println("Cuadrante con ID " + cuadranteID + " eliminado correctamente.");
+        } else {
+            System.out.println("Cuadrante con ID " + cuadranteID + " no encontrado.");
+        }
+    }
+
 
     // Métodos para editar cuadrantes, asignar turnos, etc.
 }
